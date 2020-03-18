@@ -17,7 +17,7 @@ import csv
 
 # Read cwb weather data
 
-cwb_filename = '106061116.csv'
+cwb_filename = 'sample_input.csv'
 
 data = []
 
@@ -68,10 +68,18 @@ flag = 0
 for item in target_data:
    if item['station_id']=='C0A880':
       flag = flag + 1
-      if float(item['WDSD'])>maxi:
-         maxi = float(item['WDSD'])
-      elif float(item['WDSD'])<maxi and float(item['WDSD'])<=mini:
-         mini = float(item['WDSD'])
+      temp = float(item['WDSD'])
+      if flag == 2:
+         if temp > maxi:
+            mini = maxi
+            maxi = temp
+         else :
+            mini = temp
+      else:
+         if maxi < temp:
+            maxi = temp
+         elif mini > temp:
+            mini = temp
 if flag == 0:
    s = "[['C0A880', 'none'],"
    print(s)
@@ -85,10 +93,18 @@ flag = 0
 for item in target_data:
    if item['station_id']=='C0F9A0':
       flag = flag + 1
-      if float(item['WDSD'])>maxi:
-         maxi=float(item['WDSD'])
-      elif float(item['WDSD'])<maxi and float(item['WDSD'])<=mini:
-         mini=float(item['WDSD'])
+      temp = float(item['WDSD'])
+      if flag == 2:
+         if temp > maxi:
+            mini = maxi
+            maxi = temp
+         else :
+            mini = temp
+      else:
+         if maxi < temp:
+            maxi = temp
+         elif mini > temp:
+            mini = temp
 if flag == 0:
    s = "[['C0F9A0', 'none'],"
    print(s)
@@ -102,10 +118,18 @@ flag = 0
 for item in target_data:
    if item['station_id']=='C0G640':
       flag = flag + 1
-      if float(item['WDSD'])>maxi:
-         maxi=float(item['WDSD'])
-      elif float(item['WDSD'])<maxi and float(item['WDSD'])<=mini:
-         mini=float(item['WDSD'])
+      temp = float(item['WDSD'])
+      if flag == 2:
+         if temp > maxi:
+            mini = maxi
+            maxi = temp
+         else :
+            mini = temp
+      else:
+         if maxi < temp:
+            maxi = temp
+         elif mini > temp:
+            mini = temp
 if flag == 0:
    s = "[['C0G640', 'none'],"
    print(s)
@@ -119,10 +143,18 @@ flag = 0
 for item in target_data:
    if item['station_id']=='C0R190':
       flag = flag + 1
-      if float(item['WDSD'])>maxi:
-         maxi=float(item['WDSD'])
-      elif float(item['WDSD'])<maxi and float(item['WDSD'])<=mini:
-         mini=float(item['WDSD'])
+      temp = float(item['WDSD'])
+      if flag == 2:
+         if temp > maxi:
+            mini = maxi
+            maxi = temp
+         else :
+            mini = temp
+      else:
+         if maxi < temp:
+            maxi = temp
+         elif mini > temp:
+            mini = temp
 if flag == 0:
    s = "[['C0R190', 'none'],"
    print(s)
@@ -136,10 +168,18 @@ flag = 0
 for item in target_data:
    if item['station_id']=='C0X260':
       flag = flag + 1
-      if float(item['WDSD'])>maxi:
-         maxi=float(item['WDSD'])
-      elif float(item['WDSD'])<maxi and float(item['WDSD'])<=mini:
-         mini=float(item['WDSD'])
+      temp = float(item['WDSD'])
+      if flag == 2:
+         if temp > maxi:
+            mini = maxi
+            maxi = temp
+         else :
+            mini = temp
+      else:
+         if maxi < temp:
+            maxi = temp
+         elif mini > temp:
+            mini = temp
 if flag == 0:
    s = "[['C0X260', 'none'],"
    print(s)
